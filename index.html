@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>sample website</title>
+    </head>
+    <style>
+      *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        nav{
+            display: flex;
+            justify-content: space-between;
+            background-color: rgb(226, 222, 222);
+            padding: 9px 20px;
+            align-items: center;
+        }
+        li{
+            list-style-type: none;
+            font-weight: bold;
+            cursor: pointer;
+            padding:10px 10px ;
+        }
+        ul{
+            display: flex;
+            gap: 30px;
+            align-items: center;
+            justify-content: center;
+            padding-left: 5px 10px;
+        }
+        li:hover{
+            background-color: rgb(64, 61, 243);
+            border-radius: 5px;
+
+        }
+    body {
+      background-color: #f7f4f4;
+    }
+    .hero {
+      background: url('data:image/jpeg;base64,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') center center no-repeat;
+      background-size: cover;
+      height: 100vh;
+      color: rgb(252, 249, 249);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size:xxx-large;
+    }
+    .content-title{
+      text-align: center;
+      color:#020202;
+      font-size: larger;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    .content{
+      text-align: center;
+      color: #3f3b3d;
+      font-size: medium;
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+    .section-title {
+      margin: 40px 0 20px;
+      text-align: center;
+      padding: 20px;
+    }
+    .card-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 40px 20px;
+      gap: 20px;
+    }
+    .card {
+      background: white;
+      width: 300px;
+      padding: 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      border-radius: 10px;
+      transition: transform 0.2s;
+    }
+    .card:hover {
+      transform: scale(1.03);
+    }
+    .card h3 {
+      margin-bottom: 10px;
+      color: #4A90E2;
+    }
+    .card p {
+      font-size: 14px;
+      line-height: 1.5;
+    }
+    .footer {
+      background: #0c0147;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+    }
+    
+.social-icons a {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  margin-right: 10px;
+  text-align: center;
+  line-height: 35px;
+  border-radius: 50%;
+  background: #2d2d2d;
+  color: white;
+  transition: background 0.3s;
+}
+.social-icons a:hover {
+  background: #e91e63;
+  text-align: center;
+}
+.footer-column {
+    margin: 20px 0;
+    justify-content: center;
+  }
+    </style>
+  <body>
+    <nav>
+        <a class="navbar-brand"><b>Mentor</b></a>
+        <ul>
+          <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+          <li class="nav-item" ><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item" ><a class="nav-link" href="#courses">Courses</a></li>
+          <li class="nav-item" ><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+     <section class="hero">
+    <div >
+      <h1><b>Welcome to Mentor</b></h1>
+      <p><h3>Your professional learning partner</h3></p>
+    </div>
+  </section>
+  <section class="content-title">
+  <div>
+      <h1 id="about"><b>About us</b></h1></div>
+  </section>
+  <section class="content">
+    <div>
+      <pre><h3>
+ 
+      I'M SABAHATH FATHIMA S S
+      I'M a Web Developer I'M here to help and guide you in your entire journey of learning !
+      We are here to train our furture web developer and we offers many cources related to 
+      web Development
+    
+    </h3></pre>
+    </div>
+   </section>
+  <h2 class="section-title" id="Courses"><b>Our Courses</b></h2>
+  <section class="card-container">
+    <div class="card">
+      <h3><b>Web Development</b></h3>
+      <p>Learn how to build dynamic and responsive websites from scratch.</p>
+    </div>
+    <div class="card">
+      <h3>Data Science</h3>
+      <p>Master data analysis, visualization, and machine learning techniques.</p>
+    </div>
+    <div class="card">
+      <h3>Digital Marketing</h3>
+      <p>Explore SEO, content marketing, and social media strategies.</p>
+    </div>
+  </section>
+      <footer style="background-color: #dadce0; padding: 40px 20px; display: flex; justify-content: space-around; flex-wrap: wrap; font-family: Arial, sans-serif;">
+        <div class="footer-container">
+      <div class="footer-column">
+        <h3 id="Contact">Our Services</h3>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Our Services</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Affiliate Program</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Our Services</h3>
+        <ul>
+          <li><a href="#">Web Development</a></li>
+          <li><a href="#">Digital Marketing</a></li>
+          <li><a href="#">Data Science</a></li>
+          <li><a href="#">Product Manager </a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Follow Us</h3>
+        <div class="social-icons">
+        <a href="#"><img src="https://img.icons8.com/ios-filled/20/000000/instagram-new.png"/></a>
+        <a href="#"><img src="https://img.icons8.com/ios-filled/20/000000/facebook-new.png"/></a>
+        <a href="#"><img src="https://img.icons8.com/ios-filled/20/000000/twitter.png"/></a>
+        <a href="#"><img src="https://img.icons8.com/ios-filled/20/000000/linkedin.png"/></a>
+        <a href="#"><img src="https://img.icons8.com/ios-filled/20/000000/youtube-play.png"/></a>
+        <a href="#"><img src="https://img.icons8.com/ios-filled/20/000000/telegram-app.png"/></a>
+        </div>
+      </div>
+    </div>
+      </footer>
+ </body>
+ </html>
